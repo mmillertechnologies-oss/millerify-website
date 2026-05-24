@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: 'Millerify Contact Form <onboarding@resend.dev>',
-      to: 'michael@millerify.com',
+      to: 'mmillertechnologies@gmail.com',
       replyTo: email,
       subject: `New inquiry from ${firstName || ''} ${lastName || ''} — ${company || 'No company'}`.trim(),
       html: `
