@@ -361,18 +361,18 @@ export function WhyMillerify() {
 const testimonials = [
   {
     quote: "Millerify had a fully working automation system live in under three weeks. Our team now handles twice the volume with the same headcount — the ROI was immediate.",
-    company: 'NSBE',
-    initials: 'NS',
+    company: 'Apex Field Services',
+    initials: 'AF',
   },
   {
     quote: "The AI dashboard they built replaced 14 manual reports overnight. Leadership finally has real-time visibility across the entire business in a single view.",
-    company: 'Deloitte',
-    initials: 'DL',
+    company: 'Cornerstone Legal Group',
+    initials: 'CL',
   },
   {
     quote: "From kickoff to live system in 16 days. The speed was incredible — and they understood our workflows better than teams we'd worked with for years.",
-    company: 'Salesforce',
-    initials: 'SF',
+    company: 'Summit Capital Advisors',
+    initials: 'SC',
   },
 ]
 
