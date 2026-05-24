@@ -221,7 +221,7 @@ export default function AIDemo() {
             </div>
 
             {/* Messages area */}
-            <div ref={chatRef} className="h-80 overflow-y-auto p-4 space-y-4 scroll-smooth">
+            <div ref={chatRef} className="h-64 md:h-80 overflow-y-auto p-4 space-y-4 scroll-smooth">
               {!started ? (
                 <div className="flex flex-col justify-center h-full gap-2.5">
                   <p className="text-center text-[#4a5060] text-xs font-medium uppercase tracking-wider mb-1">
@@ -259,7 +259,7 @@ export default function AIDemo() {
                         )}
                         <div className={`flex flex-col gap-1 max-w-[80%] ${msg.role === 'user' ? 'items-end' : 'items-start'}`}>
                           <div
-                            className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
+                            className={`px-4 py-3 rounded-2xl text-sm leading-relaxed break-words ${
                               msg.role === 'user'
                                 ? 'bg-white/10 text-white rounded-tr-sm'
                                 : 'bg-green-500/10 border border-green-500/20 text-[#d1fae5] rounded-tl-sm'

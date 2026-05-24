@@ -48,6 +48,8 @@ export default function Nav() {
               src="/logo.png"
               alt="Millerify"
               fill
+              priority
+              sizes="64px"
               className="object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.6)] group-hover:drop-shadow-[0_0_18px_rgba(34,197,94,0.9)] transition-all"
             />
           </div>

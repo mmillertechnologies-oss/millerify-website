@@ -32,24 +32,16 @@ export default function Hero() {
       {/* Floating orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          animate={{ y: [0, -30, 0], rotate: [0, 180, 360] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="absolute top-1/4 left-[10%] w-2 h-2 bg-green-500 rounded-full opacity-60"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          style={{ willChange: 'transform' }}
+          className="absolute top-1/4 left-[10%] w-2 h-2 bg-green-500 rounded-full opacity-50"
         />
         <motion.div
           animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-1/3 right-[15%] w-1.5 h-1.5 bg-green-400 rounded-full opacity-40"
-        />
-        <motion.div
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute bottom-1/3 left-[20%] w-1 h-1 bg-green-500 rounded-full opacity-50"
-        />
-        <motion.div
-          animate={{ y: [0, 25, 0] }}
-          transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute bottom-1/4 right-[25%] w-2 h-2 bg-green-300 rounded-full opacity-30"
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          style={{ willChange: 'transform' }}
+          className="absolute bottom-1/4 right-[20%] w-1.5 h-1.5 bg-green-400 rounded-full opacity-30"
         />
       </div>
 

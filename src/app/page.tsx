@@ -1,23 +1,35 @@
+import dynamic from 'next/dynamic'
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
-import AIDemo from '@/components/AIDemo'
-import Services from '@/components/Services'
-import { Industries, Dashboard, WhyMillerify, Testimonials } from '@/components/Sections'
-import { CTA, Footer } from '@/components/CTAFooter'
+
+const AIDemo      = dynamic(() => import('@/components/AIDemo'))
+const Services    = dynamic(() => import('@/components/Services'))
+const Sections    = dynamic(() => import('@/components/Sections').then(m => ({ default: () => {
+  const { Industries, Dashboard, WhyMillerify, Testimonials } = m
+  return (
+    <>
+      <Industries />
+      <Dashboard />
+      <WhyMillerify />
+      <Testimonials />
+    </>
+  )
+}})
+))
+const CTAFooter   = dynamic(() => import('@/components/CTAFooter').then(m => ({ default: () => {
+  const { CTA, Footer } = m
+  return <><CTA /><Footer /></>
+}})))
 
 export default function Home() {
   return (
     <main>
       <Nav />
       <Hero />
-<AIDemo />
+      <AIDemo />
       <Services />
-      <Industries />
-      <Dashboard />
-      <WhyMillerify />
-      <Testimonials />
-      <CTA />
-      <Footer />
+      <Sections />
+      <CTAFooter />
     </main>
   )
 }
