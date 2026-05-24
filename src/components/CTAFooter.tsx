@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Mail, MapPin, Zap, Twitter, Linkedin, Github } from 'lucide-react'
+import { ArrowRight, Mail, MapPin, Twitter, Linkedin, Github } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function CTA() {
@@ -197,9 +198,15 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-7 h-7 rounded-lg bg-green-500 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-black" fill="black" />
+            <div className="flex items-center gap-1 mb-4">
+              <div
+                className="w-12 h-12 relative flex-shrink-0"
+                style={{
+                  maskImage: 'radial-gradient(circle, black 48%, transparent 72%)',
+                  WebkitMaskImage: 'radial-gradient(circle, black 48%, transparent 72%)',
+                }}
+              >
+                <Image src="/logo.png" alt="Millerify" fill className="object-contain" />
               </div>
               <span className="font-bold text-white text-lg">Millerify</span>
             </div>
