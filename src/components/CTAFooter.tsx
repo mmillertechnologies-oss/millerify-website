@@ -214,8 +214,12 @@ export function Footer() {
               Enterprise AI automation for modern businesses. We build the systems that let you scale without scaling headcount.
             </p>
             <div className="flex gap-3 mt-5">
-              {[Twitter, Linkedin, Github].map((Icon, i) => (
-                <a key={i} href="#" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-[#6b7280] hover:text-white hover:border-white/10 transition-all">
+              {[
+                { Icon: Twitter, href: '#' },
+                { Icon: Linkedin, href: 'https://www.linkedin.com/company/millerify' },
+                { Icon: Github, href: 'https://github.com/mmillertechnologies-oss/Millerify' },
+              ].map(({ Icon, href }, i) => (
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center text-[#6b7280] hover:text-white hover:border-white/10 transition-all">
                   <Icon className="w-3.5 h-3.5" />
                 </a>
               ))}
