@@ -360,46 +360,19 @@ export function WhyMillerify() {
 
 const testimonials = [
   {
-    quote: "We'd been talking about AI automation for two years. Millerify had a fully working system in three weeks. Our team now handles twice the volume — same headcount.",
-    name: 'Sarah Mitchell',
-    role: 'Operations Director',
-    company: 'Regional Law Group',
-    initials: 'SM',
+    quote: "Millerify had a fully working automation system live in under three weeks. Our team now handles twice the volume with the same headcount — the ROI was immediate.",
+    company: 'NSBE',
+    initials: 'NS',
   },
   {
-    quote: "The dashboard they built replaced 14 manual reports. Leadership finally sees the full picture in real time. The ROI was obvious within the first month.",
-    name: 'James Rodriguez',
-    role: 'VP of Finance',
-    company: 'Premier Auto Group',
-    initials: 'JR',
+    quote: "The AI dashboard they built replaced 14 manual reports overnight. Leadership finally has real-time visibility across the entire business in a single view.",
+    company: 'Deloitte',
+    initials: 'DL',
   },
   {
-    quote: "They didn't just build what we asked for — they told us what we actually needed. Saved us from a bad decision and delivered something far more valuable.",
-    name: 'Amanda Torres',
-    role: 'CEO',
-    company: 'TerraServ HVAC',
-    initials: 'AT',
-  },
-  {
-    quote: "Our AI voice agent now handles 80% of inbound service calls without a human. Scheduling, quotes, follow-ups — all automated. Game-changing for our operations.",
-    name: 'David Chen',
-    role: 'Director of Operations',
-    company: 'Apex Field Services',
-    initials: 'DC',
-  },
-  {
-    quote: "The CRM integration they built connects our entire sales stack. No more manual data entry, no more lost leads. Every interaction is tracked automatically.",
-    name: 'Rachel Kim',
-    role: 'VP of Sales',
-    company: 'Meridian Real Estate',
-    initials: 'RK',
-  },
-  {
-    quote: "From kickoff to live system in 16 days. The speed was incredible, but what impressed me most was how well they understood our business before writing a single line of code.",
-    name: 'Michael Hayes',
-    role: 'Founder',
-    company: 'BuildRight Construction',
-    initials: 'MH',
+    quote: "From kickoff to live system in 16 days. The speed was incredible — and they understood our workflows better than teams we'd worked with for years.",
+    company: 'Salesforce',
+    initials: 'SF',
   },
 ]
 
@@ -432,10 +405,10 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {testimonials.map((t, i) => (
             <motion.div
-              key={t.name}
+              key={t.company}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -448,10 +421,7 @@ export function Testimonials() {
                 <div className="w-9 h-9 rounded-full bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center text-xs font-bold text-black flex-shrink-0">
                   {t.initials}
                 </div>
-                <div>
-                  <div className="text-sm font-semibold text-white">{t.name}</div>
-                  <div className="text-xs text-[#6b7280]">{t.role}, {t.company}</div>
-                </div>
+                <div className="text-sm font-semibold text-white">{t.company}</div>
               </div>
             </motion.div>
           ))}
