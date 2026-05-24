@@ -34,11 +34,11 @@ export default function Nav() {
         scrolled && 'backdrop-blur-2xl border-b border-white/5 bg-[#08090a]/80'
       )}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="#" className="flex items-center gap-1.5 group">
           <div
-            className="w-16 h-16 relative flex-shrink-0"
+            className="w-10 h-10 md:w-14 md:h-14 relative flex-shrink-0"
             style={{
               maskImage: 'radial-gradient(circle, black 48%, transparent 72%)',
               WebkitMaskImage: 'radial-gradient(circle, black 48%, transparent 72%)',
@@ -49,11 +49,11 @@ export default function Nav() {
               alt="Millerify"
               fill
               priority
-              sizes="64px"
-              className="object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.6)] group-hover:drop-shadow-[0_0_18px_rgba(34,197,94,0.9)] transition-all"
+              sizes="(max-width: 768px) 40px, 56px"
+              className="object-contain drop-shadow-[0_0_8px_rgba(34,197,94,0.5)] group-hover:drop-shadow-[0_0_14px_rgba(34,197,94,0.8)] transition-all"
             />
           </div>
-          <span className="font-bold text-white text-lg tracking-tight">Millerify</span>
+          <span className="font-bold text-white text-base md:text-lg tracking-tight">Millerify</span>
         </a>
 
         {/* Desktop nav */}
