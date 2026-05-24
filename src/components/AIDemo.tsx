@@ -50,7 +50,7 @@ export default function AIDemo() {
   const [messages, setMessages] = useState<Message[]>([])
   const [inputValue, setInputValue] = useState('')
   const [chatState, setChatState] = useState<ChatState>('idle')
-  const [started, setStarted] = useState(false)
+  const [started, setStarted] = useState(true)
   const [followUps, setFollowUps] = useState<string[]>([])
   const [usedFollowUps, setUsedFollowUps] = useState<string[]>([])
   const chatRef = useRef<HTMLDivElement>(null)
@@ -126,8 +126,7 @@ export default function AIDemo() {
   }, [chatState, usedFollowUps, scrollToBottom])
 
   const handleStart = (prompt: string) => {
-    setStarted(true)
-    sendMessage(prompt, [])
+    sendMessage(prompt, messages)
     setTimeout(() => inputRef.current?.focus(), 150)
   }
 
@@ -143,7 +142,7 @@ export default function AIDemo() {
   const resetChat = () => {
     abortRef.current?.abort()
     setMessages([])
-    setStarted(false)
+    setStarted(true)
     setChatState('idle')
     setFollowUps([])
     setUsedFollowUps([])
@@ -326,13 +325,13 @@ export default function AIDemo() {
                   value={inputValue}
                   onChange={e => setInputValue(e.target.value.slice(0, MAX_CHARS))}
                   onKeyDown={handleKeyDown}
-                  placeholder={started ? 'Ask anything...' : 'Select a prompt above to start'}
-                  disabled={!started || chatState === 'streaming'}
+                  placeholder="Ask anything about automating your business..."
+                  disabled={chatState === 'streaming'}
                   className="flex-1 bg-white/5 border border-white/8 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-[#4a5060] outline-none focus:border-green-500/40 transition-colors disabled:opacity-40"
                 />
                 <button
                   onClick={handleSend}
-                  disabled={!started || chatState === 'streaming' || !inputValue.trim()}
+                  disabled={chatState === 'streaming' || !inputValue.trim()}
                   className="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center hover:bg-green-400 transition-colors flex-shrink-0 disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   <Send className="w-4 h-4 text-black" />
