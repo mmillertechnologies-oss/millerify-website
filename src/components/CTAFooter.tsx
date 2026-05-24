@@ -74,7 +74,7 @@ export function CTA() {
                 <div className="space-y-4">
                   {[
                     { icon: Mail, text: 'michael@millerify.com' },
-                    { icon: MapPin, text: 'Raleigh, NC — working nationwide' },
+                    { icon: MapPin, text: 'Raleigh, NC' },
                   ].map(({ icon: Icon, text }) => (
                     <div key={text} className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center flex-shrink-0">
