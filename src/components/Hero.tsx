@@ -19,9 +19,6 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden">
 
-      {/* Animated background */}
-      <div className="absolute inset-0 grid-bg opacity-100" />
-
       {/* Radial glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-green-500/8 rounded-full blur-[120px]" />
@@ -46,23 +43,6 @@ export default function Hero() {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-
-        {/* Badge */}
-        <motion.div
-          variants={fadeUp}
-          initial="initial"
-          animate="animate"
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center mb-10"
-        >
-          <div className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-green-500/20 bg-green-500/5 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
-            </span>
-            <span className="text-xs font-medium text-green-400 tracking-wide">AI Automation for Businesses</span>
-          </div>
-        </motion.div>
 
         {/* Headline */}
         <motion.div
